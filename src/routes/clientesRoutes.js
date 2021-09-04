@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 })
 
 //criar um novo estudio/post/save
-router.post('/clientes', async (req, res) => {
+router.post('/', async (req, res) => {
   const clientes = new Clientes({
     _id: new mongoose.Types.ObjectId(),
     nome: req.body.nome,
