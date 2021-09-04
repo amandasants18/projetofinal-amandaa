@@ -12,7 +12,13 @@ const createClientes = async (req, res) => {
     nome: req.body.nome,
     criadoEm: req.body.criadoEm,
   })
+try{
 
+  const novoCliente = await clientes.save()
+  res.json(novoCliente)
+}catch(err){
+  res.status(400).json({message: err.message})
+}
 }
 const deleteCliente = async(req,res) =>{
 
