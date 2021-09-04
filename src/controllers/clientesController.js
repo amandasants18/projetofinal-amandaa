@@ -3,7 +3,7 @@ const Clientes = require('../models/clientes')
 
 const getAll = async (req, res) => {
   const clientes = await Clientes.find()
-  res.json(clientes)
+  res.status(200).send(clientes)
 }
 
 const createClientes = async (req, res) => {
