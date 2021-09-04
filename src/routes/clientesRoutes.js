@@ -22,15 +22,15 @@ router.post('/', async (req, res) => {
    if (clienteJaExiste) {
      return res.status(409).json({error: 'Cliente ja cadastrado.'})
   }
- try{
+//  try{
 
-     const novoCliente = await cliente.save()
-     res.status(201).json(novoCliente)
+//      const novoCliente = await cliente.save()
+//      res.status(201).json(novoCliente)
     
-    }catch(err){
+//     }catch(err){
 
-    res.status.apply(400).json({message: err.message})
- }
+//     res.status.apply(400).json({message: err.message})
+//  }
 })
 
 router.get("/oi", (req, resp)=>{
