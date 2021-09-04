@@ -5,10 +5,10 @@ const Clientes = require('../models/clientes')
 
 
 //listar todos os estudios/get/find
-// router.get('/', async (req, res) => {
-//   const clientes = await Clientes.find()
-//   res.json(clientes)
-// })
+router.get('/', async (req, res) => {
+  const clientes = await Clientes.find()
+  res.json(clientes)
+})
 
 //criar um novo estudio/post/save
 router.post('/', async (req, res) => {

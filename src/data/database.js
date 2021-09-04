@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const mongoose = require('mongoose')
 
 
@@ -12,4 +14,6 @@ const connect = () => {mongoose.connect(mongo_url, {
 }
 
 module.exports = { connect }
+
+
 
