@@ -11,6 +11,9 @@ const createClientes = async (req, res) => {
   const clientes = new Clientes({
     _id: new mongoose.Types.ObjectId(),
     nome: req.body.nome,
+    cpf: req.body.cpf,
+    sexo: req.body.sexo,
+    endereco: req.body.endereco,
     criadoEm: req.body.criadoEm,
   })
 try{

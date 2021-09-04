@@ -47,8 +47,8 @@ router.post("/create", controller.createClientes)
 router.get("/oi", (req, resp)=>{
   resp.status(200).send({"mensagem":"FUNCIONANDO TUDO"})
 })
-router.delete('/:id', controller.deleteOne)
 
+router.delete('/:id', controller.deleteOne)
 
 
 // router.delete('/:id', controller.deleteCliente)

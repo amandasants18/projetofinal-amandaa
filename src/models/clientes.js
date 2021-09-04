@@ -6,7 +6,19 @@ const clienteSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  criadoEm: {
+  cpf: {
+    type: String,
+    required: true
+  },
+  sexo: {
+    type: String,
+    required: true
+  },
+  endereco: {
+    type: String,
+    required: true
+  },
+    criadoEm: {
     type: Date,
     required: true,
     default: new Date
