@@ -42,7 +42,7 @@ router.post("/create", controller.createClientes)
 // })
 
 router.get("/oi", (req, resp)=>{
-  resp.status(200).send({"mensagem":"oi to aqui ta funcionando "})
+  resp.status(200).send({"mensagem":"FUNCIONANDO TUDO"})
 })
 
 
