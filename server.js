@@ -17,4 +17,3 @@ app.use('/clientes', clientesRouter)
 
 
 app.listen(PORT, () => console.log('listening on port 3333'))
-module.exports = app
