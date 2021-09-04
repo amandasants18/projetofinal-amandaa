@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const clienteSchema = new mongoose.Schema({
+const processoSchema = new mongoose.Schema({
 
 _id: mongoose.Schema.Types.ObjectId,
 
