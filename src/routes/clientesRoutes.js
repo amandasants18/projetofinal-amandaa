@@ -1,10 +1,17 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-const Clientes = require('../models/clientes')
 const controller = require("../controllers/clientesController")
 
 
+
+
+
+
+//listar um estudio/get/findById
+router.get("/", controller.getAll)
+//atualizar uma informacao especifica num estudio/patch/findById/save
+router.post("/create", controller.createClientes)
 // //listar todos os estudios/get/find
 // router.get('/', async (req, res) => {
 //   const clientes = await Clientes.find()
@@ -40,11 +47,8 @@ router.get("/oi", (req, resp)=>{
 
 
 
-//listar um estudio/get/findById
 
-//atualizar uma informacao especifica num estudio/patch/findById/save
-router.post("/", controller.createClientes)
-router.get("/", controller.getAll)
+
 // router.patch('/:id', controller.updateCliente)
 
 
