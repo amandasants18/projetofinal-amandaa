@@ -12,6 +12,8 @@ const controller = require("../controllers/clientesController")
 router.get("/", controller.getAll)
 //atualizar uma informacao especifica num estudio/patch/findById/save
 router.post("/create", controller.createClientes)
+//deletar
+router.delete("/:id", controller.deleteCliente)
 // //listar todos os estudios/get/find
 // router.get('/', async (req, res) => {
 //   const clientes = await Clientes.find()
