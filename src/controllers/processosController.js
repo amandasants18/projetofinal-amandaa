@@ -8,7 +8,7 @@ const getAllProcessos = async (req, res) => {
   }
 
   const createProcessos = async (req, res) => {
-    const clientes = new Clientes({
+    const processos = new Processos({
       _id: new mongoose.Types.ObjectId(),
       numero: req.body.numero,
       descricao_lide: req.body.descricao_lide,
@@ -19,12 +19,12 @@ const getAllProcessos = async (req, res) => {
     })
   try{
   
-    const novoCliente = await clientes.save()
-    res.json(novoCliente)
+    const novoProcesso = await processos.save()
+    res.json(novoProcesso)
   }catch(err){
     res.status(400).json({message: err.message})
   }
-  }
+}
 
 
   module.exports = 
