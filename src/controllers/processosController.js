@@ -27,4 +27,8 @@ const getAllProcessos = async (req, res) => {
   }
 
 
-  module.exports = {getAllProcessos, createProcessos}
+  module.exports = 
+  {
+      getAllProcessos,
+     createProcessos
+}
