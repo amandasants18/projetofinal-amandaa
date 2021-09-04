@@ -15,8 +15,6 @@ app.use(express.json())
 const clientesRouter = require('./src/routes/clientesRoutes')
 app.use('/clientes', clientesRouter)
 
-// const titulosRouter = require('./src/routes/titulos.routes')
-// app.use('/titulos', titulosRouter)
 
 app.listen(PORT, () => console.log('listening on port 3333'))
 
