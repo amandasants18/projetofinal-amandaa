@@ -8,7 +8,7 @@ nome: {
 
     type: String,
     required: true
-}
+},
 
 // cpf: {
 
@@ -43,12 +43,12 @@ nome: {
 // },
 
 
-// criadoEm: {
+criadoEm: {
 
-//     type: Date,
-//     required: true,
-//     default: new Date
-// }
+    type: Date,
+    required: true,
+    default: new Date
+}
 
 
 

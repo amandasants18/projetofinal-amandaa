@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 
-const mongo_url = process.env.MONGO_URI
+const mongo_url = process.env.MONGO_URI || "mongodb://localhost:27017/advogados_associados"
 
 const connect = () => {mongoose.connect(mongo_url, {
   useNewUrlParser: true,
