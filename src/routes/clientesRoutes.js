@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const Clientes = require('../models/clientes')
+const controller = require("../controllers/clientesController")
 
 
 //listar todos os estudios/get/find
@@ -37,10 +38,12 @@ router.get("/oi", (req, resp)=>{
   resp.status(200).send({"mensagem":"oi to aqui ta funcionando "})
 })
 
+
+
 //listar um estudio/get/findById
 
 //atualizar uma informacao especifica num estudio/patch/findById/save
-
+router.post("/create", controller.createClientes)
 // router.patch('/:id', controller.updateCliente)
 
 
