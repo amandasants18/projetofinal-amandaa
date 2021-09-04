@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
-const connect = () => {mongoose.connect('mongodb://localhost:27017/advogados_associados', {
+
+const mongo_url = process.env.MONGO_URI
+
+const connect = () => {mongoose.connect(mongo_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

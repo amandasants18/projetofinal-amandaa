@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const Clientes = require('../models/clientes')
-const controller = require('../controllers/clientesController')
+
 
 //listar todos os estudios/get/find
 // router.get('/', async (req, res) => {
@@ -18,18 +18,19 @@ router.post('/', async (req, res) => {
     criadoEm: req.body.criadoEm,
   })
  
-//   const clienteJaExiste = await Clientes.findOne({nome: req.body.nome})
-//   if (clienteJaExiste) {
-//     return res.status(409).json({error: 'Cliente ja cadastrado.'})
-//   }
-// try{
+   const clienteJaExiste = await Clientes.findOne({nome: req.body.nome})
+   if (clienteJaExiste) {
+     return res.status(409).json({error: 'Cliente ja cadastrado.'})
+  }
+ try{
 
-//     const novoCliente = await cliente.save()
-//     res.status(201).json(novoCliente)
-// }catch(err){
+     const novoCliente = await cliente.save()
+     res.status(201).json(novoCliente)
+    
+    }catch(err){
 
-//     res.status.apply(400).json({message: err.message})
-// }
+    res.status.apply(400).json({message: err.message})
+ }
 })
 
 

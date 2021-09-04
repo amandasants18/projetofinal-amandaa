@@ -8,47 +8,47 @@ nome: {
 
     type: String,
     required: true
-},
-
-cpf: {
-
-    type: String,
-    required: true
-},
-
-sexo: {
-
-    type: String,
-    required: true
-},
-
-endereco: {
-
-    type: String,
-    required: true
-},
-data_nasc: {
-
-    type: Date,
-    required: true,
-    default: new Date
-},
-
-processo: {
- 
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: 'processo'
-
-},
-
-
-criadoEm: {
-
-    type: Date,
-    required: true,
-    default: new Date
 }
+
+// cpf: {
+
+//     type: String,
+//     required: true
+// },
+
+// sexo: {
+
+//     type: String,
+//     required: true
+// },
+
+// endereco: {
+
+//     type: String,
+//     required: true
+// },
+// data_nasc: {
+
+//     type: Date,
+//     required: true,
+//     default: new Date
+// },
+
+// processo: {
+ 
+//     type: mongoose.Schema.Types.ObjectId,
+//     required: true,
+//     ref: 'processo'
+
+// },
+
+
+// criadoEm: {
+
+//     type: Date,
+//     required: true,
+//     default: new Date
+// }
 
 
 
