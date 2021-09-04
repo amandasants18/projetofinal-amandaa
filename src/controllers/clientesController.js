@@ -21,30 +21,30 @@ try{
 }
 }
 
-const deleteCliente = async(req,res) =>{
+// const deleteCliente = async(req,res) =>{
 
-    try{
+//     try{
 
-        const cliente = await Clientes.findById(req.params.id)
+//         const cliente = await Clientes.findById(req.params.id)
 
-        // se vc nao encontrar me retorne um erro
+//         // se vc nao encontrar me retorne um erro
 
-        if(cliente == null){
-            return res.status(404).json({message: "Cliente não encontrado"})
-        }
+//         if(cliente == null){
+//             return res.status(404).json({message: "Cliente não encontrado"})
+//         }
 
     
-     //deletando o estudio
-      await cliente.remove()
+//      //deletando o estudio
+//       await cliente.remove()
 
-     //retorne o documento deletados
-     res.status(200).json({message: "Cliente deletado"})
-    }catch(err){
+//      //retorne o documento deletados
+//      res.status(200).json({message: "Cliente deletado"})
+//     }catch(err){
 
-        //se houve qualquer erro mostre o erro acima
-        res.status(500).json({message: err.message})
-    }
-}
+//         //se houve qualquer erro mostre o erro acima
+//         res.status(500).json({message: err.message})
+//     }
+
 // const updateCliente = async(req,res) => {
 // //tenta encontrar um estudio pelo id
 //     try{
@@ -77,6 +77,6 @@ const deleteCliente = async(req,res) =>{
 module.exports = {
   getAll,
   createClientes,
-  deleteCliente
+
 }
 
