@@ -14,8 +14,8 @@ app.use(express.json())
 
 const clientesRouter = require('./src/routes/clientesRoutes')
 app.use('/clientes', clientesRouter)
-const processosRouter = require('./src/routes/processosRoutes')
-app.use('/processos', processosRouter )
+// const processosRouter = require('./src/routes/processosRoutes')
+// app.use('/processos', processosRouter )
 
 
 app.listen(PORT, () => console.log('listening on port 3333'))
