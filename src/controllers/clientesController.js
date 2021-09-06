@@ -64,6 +64,9 @@ const updateCliente = async(req,res) => {
      if(req.body.nome != null){
 
         cliente.nome = req.body.nome
+        cliente.cpf = req.body.cpf
+        cliente.sexo = req.body.sexo
+        cliente.endereco = req.body.endereco
      }
 //ja salvou??
      const clienteAtualizado = await cliente.save()
