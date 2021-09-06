@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const clientes = require('../models/clientes')
+const Clientes = require('../models/clientes')
 
 
 const getAll = async (req, res) => {
