@@ -12,7 +12,9 @@ const controller = require("../controllers/clientesController")
 router.get("/", controller.getAll)
 //atualizar uma informacao especifica num estudio/patch/findById/save
 router.post("/create", controller.createClientes)
-//deletar
+//atualizar
+
+
 
 // router.delete("/:id", controller.deleteCliente)
 // //listar todos os estudios/get/find
@@ -48,10 +50,11 @@ router.get("/oi", (req, resp)=>{
   resp.status(200).send({"mensagem":"FUNCIONANDO TUDO"})
 })
 
+// // router.update('/:id', controller.deleteOne)
+// router.delete('/:id', controller.updateCliente)
+
+router.patch('/:id', controller.updateCliente)
 router.delete('/:id', controller.deleteOne)
-
-
-// router.delete('/:id', controller.deleteCliente)
 
 // router.patch('/:id', controller.updateCliente)
 
