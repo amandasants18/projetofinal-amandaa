@@ -5,6 +5,7 @@ const controller = require("../controllers/processosController")
 
 router.get("/", controller.getAllProcessos)
 router.post("/create", controller.createProcesso)
+router.delete("/:id", controller.deleteProcesso)
 
 
 
