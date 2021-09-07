@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const PORT  = process.env.PORT || 8080
 
 
 //TODO:
@@ -19,4 +20,4 @@ app.use('/clientes', clientesRouter)
 
 
 
-app.listen(8080, () => console.log('listening on port 8080'))
+app.listen(PORT , () => console.log('listening on port 8080'))
