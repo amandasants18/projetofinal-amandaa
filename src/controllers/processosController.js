@@ -6,7 +6,7 @@ const Processos = require('../models/processos')
 const getAllProcessos = async (req,res) =>{
 
   const processos = await Processos.find()
-  res.status(200).send(Processos)
+  res.status(200).send(processos)
 
 }
 const createProcesso = async (req, res) => {
