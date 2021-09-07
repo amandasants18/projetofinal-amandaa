@@ -10,9 +10,11 @@ const controller = require("../controllers/clientesController")
 
 //listar um estudio/get/findById
 router.get("/", controller.getAll)
+
 //atualizar uma informacao especifica num estudio/patch/findById/save
 router.post("/create", controller.createClientes)
 //atualizar
+
 
 
 
@@ -55,6 +57,7 @@ router.get("/oi", (req, resp)=>{
 
 router.patch('/:id', controller.updateCliente)
 router.delete('/:id', controller.deleteOne)
+router.get("/:id", controller.getClienteId)
 
 // router.patch('/:id', controller.updateCliente)
 

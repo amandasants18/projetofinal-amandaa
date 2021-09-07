@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const Processos = require('../models/processos')
-const Clientes = require('../models/clientes')
+
+
+
 
 
 const getAllProcessos = async (req,res) =>{
@@ -29,13 +31,6 @@ const createProcesso = async (req, res) => {
   }
 
   //achar processo por id do cliente
-
-  const getProcessoId = async(req,res) =>{
-
-
-      const p = await Processos.findById(req.params.id)
-      res.status(200).send(p)
-    }
   
   const deleteProcesso = async(req,res) =>{
 
@@ -66,8 +61,7 @@ const createProcesso = async (req, res) => {
 
     createProcesso,
     getAllProcessos,
-    deleteProcesso,
-    getProcessoId
+    deleteProcesso
     
     
   
