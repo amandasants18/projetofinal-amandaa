@@ -32,9 +32,8 @@ const createProcesso = async (req, res) => {
 
   const getProcessoId = async(req,res) =>{
 
-  
 
-      const p = await Clientes.findById(req.params.id)
+      const p = await Processos.findById(req.params.id)
       res.status(200).send(p)
     }
   
