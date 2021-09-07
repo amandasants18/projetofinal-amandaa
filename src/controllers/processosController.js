@@ -28,10 +28,36 @@ const createProcesso = async (req, res) => {
   }
   }
 
+  const deleteProcesso = async(req,res) =>{
+
+    try{
+  
+        const processos = await Processos.findById(req.params.id)
+  
+        // se vc nao encontrar me retorne um erro
+  
+        if(processos == null){
+            return res.status(404).json({message: "Cliente nao encontrado"})
+        }
+  
+    
+     //deletando o estudio
+      await processos.remove()
+  
+     //retorne o documento deletados
+     res.status(200).json({message: "Processo deletado"})
+    }catch(err){
+  
+        //se houve qualquer erro mostre o erro acima
+        res.status(500).json({message: err.message})
+    }
+  }
+  
   module.exports = {
 
     createProcesso,
-    getAllProcessos
+    getAllProcessos,
+    deleteProcesso
     
     
   
