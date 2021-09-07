@@ -1,6 +1,14 @@
 const mongoose = require('mongoose')
 const Processos = require('../models/processos')
 
+
+
+const getAllProcessos = async (req,res) =>{
+
+  const Processos = await Processos.find()
+  res.status(200).send(Processos)
+
+}
 const createProcesso = async (req, res) => {
     const processos = new Processos({
       _id: new mongoose.Types.ObjectId(),
@@ -22,7 +30,8 @@ const createProcesso = async (req, res) => {
 
   module.exports = {
 
-    createProcesso
+    createProcesso,
+    getAllProcessos
     
     
   
