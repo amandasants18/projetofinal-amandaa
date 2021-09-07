@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-const PORT = process.env.PORT || 3333
 //TODO:
 //conectar o db
 const db = require('./src/data/database')
@@ -11,14 +10,11 @@ db.connect()
 app.use(cors())
 app.use(express.json())
 
-
+const processosRouter = require('./src/routes/processosRoutes')
+app.use('/processos', processosRouter)
 const clientesRouter = require('./src/routes/clientesRoutes')
 app.use('/clientes', clientesRouter)
-// const processosRouter = require('./src/routes/processosRoutes')
-// app.use('/processos', processosRouter )
 
 
-app.listen(PORT, () => console.log('listening on port 3333'))
 
-
-module.exports = app
+app.listen(3333, () => console.log('listening on port 3333'))
