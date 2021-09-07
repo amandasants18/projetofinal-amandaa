@@ -1,10 +1,17 @@
 const mongoose = require('mongoose')
 const Processos = require('../models/processos')
-const Clientes = require('../models/clientes')
 
 
-
-
+const getProcessosPorCliente = async (req, res) => { 
+  const { cliente } = req.params
+  
+  Processos.find({ cliente : cliente }) 
+  
+  .then((list)=> { 
+  
+  if(!list.length > 0) return res.status(404).send({"message": "cliente n encontrado, tente novamente!"}) 
+  
+  return res.status(200).send(list) }) }
 
 const getAllProcessos = async (req,res) =>{
 
@@ -62,7 +69,8 @@ const createProcesso = async (req, res) => {
 
     createProcesso,
     getAllProcessos,
-    deleteProcesso
+    deleteProcesso,
+    getProcessosPorCliente
     
     
   
