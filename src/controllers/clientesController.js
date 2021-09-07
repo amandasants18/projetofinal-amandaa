@@ -3,22 +3,22 @@ const Clientes = require('../models/clientes')
 
 
 
-const getClienteId = async(req,res) => {
-  //tenta encontrar um estudio pelo id
-      try{
+// const getClienteId = async(req,res) => {
+  
+//       try{
        
-          const cliente = await Clientes.findById(req.params.id)
+//           const cliente = await Clientes.findById(req.params.id)
           
-          //se vc nao encontrar me retorne um erro
-          if(cliente == null){
-              return res.status(404).json({message: "Cliente não encontrado"})
-          }
-        }catch(err){
+//           //se vc nao encontrar me retorne um erro
+//           if(cliente == null){
+//               return res.status(404).json({message: "Cliente não encontrado"})
+//           }
+//         }catch(err){
 
-          //se houve qualquer erro mostre o erro acima
-          res.status(500).json({message: err.message})
-      }
-    }
+//           //se houve qualquer erro mostre o erro acima
+//           res.status(500).json({message: err.message})
+//       }
+//     }
       
 const getAll = async (req, res) => {
   const clientes = await Clientes.find()
@@ -105,7 +105,7 @@ module.exports = {
   createClientes,
   deleteOne,
   updateCliente,
-  getClienteId
+  // getClienteId
 
   
 
