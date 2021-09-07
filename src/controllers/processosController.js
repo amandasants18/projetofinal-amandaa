@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Processos = require('../models/processos')
 
 const createProcesso = async (req, res) => {
-    const processos = new Processo({
+    const processos = new Processos({
       _id: new mongoose.Types.ObjectId(),
       numero: req.body.numero,
       descricao_lide: req.body.descricao_lide,
