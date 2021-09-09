@@ -38,7 +38,7 @@ const createProcesso = async (req, res) => {
   }
   }
 
-  //achar processo por id do cliente
+
   
   const deleteProcesso = async(req,res) =>{
 
@@ -46,14 +46,13 @@ const createProcesso = async (req, res) => {
   
         const processos = await Processos.findById(req.params.id)
   
-        // se vc nao encontrar me retorne um erro
   
         if(processos == null){
             return res.status(404).json({message: "Cliente nao encontrado"})
         }
   
     
-     //deletando o estudio
+ 
       await processos.remove()
   
      //retorne o documento deletados
@@ -64,13 +63,48 @@ const createProcesso = async (req, res) => {
         res.status(500).json({message: err.message})
     }
   }
+
+    const updateProcesso = async(req,res) => {
+      //tenta encontrar processo pelo id
+          try{
+           
+              const processo = await Processos.findById(req.params.id)
+              
+              //se vc nao encontrar me retorne um erro
+              if(processo == null){
+                  return res.status(404).json({message: "Processo não encontrado"})
+              }
+              //no corpo da requisicao tem algo digitado? considere minha alteração
+           if(req.body.numero != null){
+      
+              processo.numero = req.body.numero
+              processo.descricao_lide = req.body.descricao_lide
+              processo.comarca = req.body.comarca
+              processo.fase_processual = req.body.endereco
+              processo.cliente = req.body.cliente
+           }
+      //ja salvou??
+           const processoAtualizado = await cliente.save()
+      
+           //retorne o documento atualizado
+           res.status(200).json(processoAtualizado)
+          }catch(err){
+      
+              //se houve qualquer erro mostre o erro acima
+              res.status(500).json({message: err.message})
+          }
+      
+  }
+
   
   module.exports = {
 
+    updateProcesso,
     createProcesso,
     getAllProcessos,
     deleteProcesso,
-    getProcessosPorCliente
+    getProcessosPorCliente,
+    
     
     
   
