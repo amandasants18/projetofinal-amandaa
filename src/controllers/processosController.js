@@ -84,7 +84,7 @@ const createProcesso = async (req, res) => {
               processo.cliente = req.body.cliente
            }
       //ja salvou??
-           const processoAtualizado = await cliente.save()
+           const processoAtualizado = await processo.save()
       
            //retorne o documento atualizado
            res.status(200).json(processoAtualizado)
