@@ -14,6 +14,11 @@ const processosSchema = new mongoose.Schema({
       type: String,
       required: true
     },
+
+    prazo: {
+      type: String,
+      required: true
+  },
    
 
     fase_processual: {
