@@ -80,7 +80,7 @@ const createProcesso = async (req, res) => {
               processo.numero = req.body.numero
               processo.descricao_lide = req.body.descricao_lide
               processo.comarca = req.body.comarca
-              processo.fase_processual = req.body.endereco
+              processo.fase_processual = req.body.fase_processual
               processo.cliente = req.body.cliente
            }
       //ja salvou??
