@@ -25,6 +25,7 @@ const createProcesso = async (req, res) => {
       numero: req.body.numero,
       descricao_lide: req.body.descricao_lide,
       comarca: req.body.comarca,
+      prazo: req.body.prazo,
       fase_processual: req.body.fase_processual,
       cliente: req.body.cliente,
       criadoEm: req.body.criadoEm,
