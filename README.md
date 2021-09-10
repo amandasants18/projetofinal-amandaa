@@ -1,15 +1,15 @@
 # projetofinal-amandaa
 
 
- Amanda Santos Advocacia e Consultoria Jurídica
+ # Amanda Santos Advocacia e Consultoria Jurídica
 
 
-# Objetivo
-
-
-
+ Objetivo
 
 
 
-## Repositório
-[MIT](https://github.com/amandasants18)
+
+
+
+Repositório
+[LINK GITHUB](https://github.com/amandasants18)
