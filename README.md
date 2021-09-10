@@ -4,7 +4,8 @@
  # Amanda Santos Advocacia e Consultoria Jurídica
 
 
- Objetivo
+
+Objetivo
 
 Este projeto tem como objetivo facilitar o dia-dia de advogados que não possuem controle sob seus clientes e nem de seus processos, gerenciando melhor seus prazos, fases processuais e também fornecendo uma pequena descrição do que se trata a lide.
 
@@ -51,5 +52,16 @@ Este projeto tem como objetivo facilitar o dia-dia de advogados que não possuem
 
 
 
-Repositório
-[LINK GITHUB](https://github.com/amandasants18)
+
+
+
+
+
+
+
+
+
+Por fim, gostaria de agradecer a todas que contribuiram para que eu chegasse até aqui.. Posso dizer que não foi fácil, mas que a caminhada valeu a pena, e tenho certeza que é só o começo de muita luta que virá pela frente!!!
+
+
+
