@@ -14,13 +14,21 @@ Este projeto tem como objetivo facilitar o dia-dia de advogados que não possuem
 
 
 ###[x] JavaScript
+#
 ###[x] NodeJS
+#
 ###[x] Express
+#
 ###[x] Dotenv
+#
 ###[x] Mongoose
+#
 ###[x] Nodemon
+#
 ###[x] Npm
+#
 ###[x] Postman
+#
 ###[x] MongoDB
 
 :triangular_flag_on_post: A Arquitetura utilizada foi a MVC. Utilizando:
