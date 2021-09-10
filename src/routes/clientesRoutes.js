@@ -48,7 +48,7 @@ router.post("/create", controller.createClientes)
 // //  }
 // })
 
-router.get("/oi", (req, resp)=>{
+router.get("/", (req, resp)=>{
   resp.status(200).send({"mensagem":"FUNCIONANDO TUDO"})
 })
 
