@@ -10,6 +10,7 @@ const getAll = async (req, res) => {
   res.status(200).send(clientes)
 }
 
+
 const createClientes = async (req, res) => {
   const clientes = new Clientes({
     _id: new mongoose.Types.ObjectId(),
@@ -19,6 +20,11 @@ const createClientes = async (req, res) => {
     endereco: req.body.endereco,
     criadoEm: req.body.criadoEm,
   })
+
+  const clienteExiste = await Clientes.findOne({nome: req.body.nome})
+  if (clienteExiste) {
+    return res.status(409).json({error: 'Cliente ja cadastrado.'})
+  }
 try{
 
   const novoCliente = await clientes.save()
@@ -27,6 +33,7 @@ try{
   res.status(400).json({message: err.message})
 }
 }
+
 
 const deleteCliente = async(req,res) =>{
 
