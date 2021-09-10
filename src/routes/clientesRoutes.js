@@ -4,14 +4,6 @@ const mongoose = require('mongoose')
 const controller = require("../controllers/clientesController")
 
 
-router.get("/", (req, res)=>{
-  res.status(200).send({
-      "mensagem": "Bem vindo ao Amanda Santos Advocacia e Consultoria Jurídica{reprograma}",
-      "title":  "Amanda-Santos-Advocacia",
-      "version": "1.0.0"
-  })
-})
-
 
 
 //listar um estudio/get/findById
