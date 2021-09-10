@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const index = require('./src/routes/index')
 const PORT  = process.env.PORT || 8080
 
 
@@ -11,6 +12,7 @@ db.connect()
 //usar as rotas
 app.use(cors())
 app.use(express.json())
+app.use("/", index)
 
 const processosRouter = require('./src/routes/processosRoutes')
 app.use('/processos', processosRouter)
