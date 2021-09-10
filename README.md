@@ -30,6 +30,7 @@ Este projeto tem como objetivo facilitar o dia-dia de advogados que não possuem
 [x] Postman
 #
 [x] MongoDB
+#
 
 :triangular_flag_on_post: A Arquitetura utilizada foi a MVC. Utilizando:
 
@@ -42,6 +43,7 @@ Este projeto tem como objetivo facilitar o dia-dia de advogados que não possuem
 [x] Routes
 #
 [x] Server 
+#
 
 :triangular_flag_on_post: Requisitos/Rotas:
 
@@ -65,11 +67,12 @@ Este projeto tem como objetivo facilitar o dia-dia de advogados que não possuem
 [x] "/processos/[ID]" - Deverá deletar um processo de acordo com seu ID.
 
 
+#
 :triangular_flag_on_post: Regras de Negócio: 
 
 [x] Para criar um novo processo, deverá ser vinculado um cliente existente no momento da criação, utilizando o número do id do cliente, no corpo da requisição.
 #
-###[x] Não é possível cadastrar processo com mesmo número.
+[x] Não é possível cadastrar processo com mesmo número.
 
 
 
