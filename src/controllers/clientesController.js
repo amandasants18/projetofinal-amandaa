@@ -1,24 +1,9 @@
 const mongoose = require('mongoose')
 const Clientes = require('../models/clientes')
+const processos = require('../models/processos')
 
 
 
-// const getClienteId = async(req,res) => {
-  
-//       try{
-       
-//           const cliente = await Clientes.findById(req.params.id)
-          
-//           //se vc nao encontrar me retorne um erro
-//           if(cliente == null){
-//               return res.status(404).json({message: "Cliente não encontrado"})
-//           }
-//         }catch(err){
-
-//           //se houve qualquer erro mostre o erro acima
-//           res.status(500).json({message: err.message})
-//       }
-//     }
       
 const getAll = async (req, res) => {
   const clientes = await Clientes.find()
@@ -43,11 +28,11 @@ try{
 }
 }
 
-const deleteOne = async(req,res) =>{
+const deleteCliente = async(req,res) =>{
 
   try{
 
-      const clientes = await Clientes.findById(req.params.id)
+      const clientes = await Clientes.findById(req.params.id) 
 
       // se vc nao encontrar me retorne um erro
 
@@ -56,8 +41,9 @@ const deleteOne = async(req,res) =>{
       }
 
   
-   //deletando o estudio
+ 
     await clientes.remove()
+   
 
    //retorne o documento deletados
    res.status(200).json({message: "Cliente deletado"})
@@ -103,9 +89,9 @@ const updateCliente = async(req,res) => {
 module.exports = {
   getAll,
   createClientes,
-  deleteOne,
+  deleteCliente,
   updateCliente,
-  // getClienteId
+
 
   
 

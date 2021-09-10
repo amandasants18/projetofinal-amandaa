@@ -56,7 +56,7 @@ router.get("/oi", (req, resp)=>{
 // router.delete('/:id', controller.updateCliente)
 
 router.patch('/:id', controller.updateCliente)
-router.delete('/:id', controller.deleteOne)
+router.delete('/:id', controller.deleteCliente)
 // router.get("/:id", controller.getClienteId)
 
 // router.patch('/:id', controller.updateCliente)
