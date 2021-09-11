@@ -21,7 +21,10 @@ const createClientes = async (req, res) => {
     criadoEm: req.body.criadoEm,
   })
 
-  
+  const clienteExiste = await Clientes.findOne({nome: req.body.nome})
+  if (clienteExiste) {
+    return res.status(409).json({error: 'Cliente ja cadastrado.'})
+  }
 try{
 
   const novoCliente = await clientes.save()
