@@ -32,9 +32,9 @@ const createProcesso = async (req, res) => {
     })
 
     const processoExiste = await Processos.findOne({nome: req.body.numero})
-  if (processoExiste) {
-    return res.status(409).json({error: 'Processo ja cadastrado.'})
-  }
+    if (processoExiste) {
+      return res.status(409).json({error: 'Processo já cadastrado.'})
+    }
   try{
   
     const novoProcesso = await processos.save()
